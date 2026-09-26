@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.layout {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "sidebar contenido"
+        "footer footer";
+}
+
+.header {
+    grid-area: header;
+    background-color: #d94190;
+    color: white;
+    padding: 16px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #eef3f8;
+    padding: 16px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #e794bd;
+}
+
+.contenido {
+    grid-area: contenido;
+    padding: 24px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #2e2e2e;
+    color: white;
+    text-align: center;
+    padding: 12px;
+}
+
+.nombre-marca {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-right: 12px;
+}
+
+.tipo-marca {
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}

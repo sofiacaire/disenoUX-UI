@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 24px;
+}
+
+.lista-links {
+    list-style: none;
+    padding: 0;
+    max-width: 260px;
+}
+
+.lista-links li {
+    border-bottom: 1px solid #ddd;
+}
+
+.lista-links a {
+    display: block;
+    padding: 10px 8px;
+    text-decoration: none;
+    color: #2e2e2e;
+}
+
+/* estado al pasar el mouse */
+.lista-links a:hover {
+    background-color: #fde5ed;
+    color: #d94190;
+}
+
+/* aplica a elementos pares de la lista */
+.lista-links li:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.lista-links a::before {
+    content: "➜ ";
+    color: #d94190;
+    font-weight: bold;
+}

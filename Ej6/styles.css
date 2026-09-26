@@ -1,0 +1,31 @@
+/* 1. Selector de tipo/etiqueta */
+div {
+    margin: 12px 0;
+    padding: 10px;
+}
+
+/* 2. Selector de clase */
+.card {
+    background-color: #eef3f8;
+    border: 1px solid #b8cbe0;
+    border-radius: 6px;
+    padding: 16px;
+}
+
+/* 3. Selector descendiente: solo <p> que estén DENTRO de .card */
+.card p {
+    color: #1d4e89;
+    font-weight: bold;
+}
+
+/* 4. Selector de ID: máxima especificidad, es único en la página */
+#destacada {
+    border: 2px solid #f955b8;
+    background-color: #f1b9d3;
+}
+
+span {
+    background-color: #ffe08a;
+    padding: 0 4px;
+    border-radius: 3px;
+}

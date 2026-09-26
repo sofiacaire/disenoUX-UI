@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    background-color: #f5f6f8;
+}
+
+h1 {
+    color: #22314e;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== Galería tipo mosaico ===== */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-rows: 120px;
+    grid-auto-flow: dense;
+    gap: 12px;
+}
+
+/* ===== Cada imagen recortada prolijamente dentro de su celda ===== */
+.item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+/* ===== Elemento que ocupa 2 columnas y 2 filas ===== */
+.item.grande {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* ===== Elemento ancho: ahora también con más alto para que no se vea aplastado ===== */
+.item.ancho {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* ===== Elemento que ocupa 2 filas ===== */
+.item.alto {
+    grid-row: span 2;
+}

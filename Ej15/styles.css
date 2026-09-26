@@ -1,0 +1,124 @@
+/* ===== Estilos base (mobile first) ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.layout {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "contenido"
+        "footer";
+}
+
+.header {
+    grid-area: header;
+    background-color: #d94190;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+.sidebar {
+    display: none;
+}
+
+.contenido {
+    grid-area: contenido;
+    padding: 16px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #2e2e2e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.85rem;
+}
+
+.nombre-marca {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: block;
+    margin-right: 0;
+    margin-bottom: 4px;
+}
+
+.tipo-marca {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   RESPONSIVE - Enfoque Mobile First
+   Partimos del layout simple para celular (una columna, sin
+   sidebar) y vamos agregando complejidad con min-width a
+   medida que hay más espacio disponible.
+   ========================================================= */
+
+/* ===== Breakpoint 1: Tablets y pantallas >= 768px ===== */
+@media (min-width: 768px) {
+    .layout {
+        grid-template-columns: 220px 1fr;
+        grid-template-areas:
+            "header header"
+            "sidebar contenido"
+            "footer footer";
+    }
+
+    .sidebar {
+        display: block;
+        grid-area: sidebar;
+        background-color: #eef3f8;
+        padding: 16px;
+    }
+
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .sidebar a {
+        text-decoration: none;
+        color: #e794bd;
+    }
+
+    .header {
+        padding: 16px;
+        text-align: left;
+    }
+
+    .nombre-marca {
+        display: inline;
+        font-size: 2rem;
+        margin-right: 12px;
+    }
+
+    .tipo-marca {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+
+    .contenido {
+        padding: 24px;
+    }
+}
+
+/* ===== Breakpoint 2: Escritorio grande >= 1200px ===== */
+@media (min-width: 1200px) {
+    .layout {
+        grid-template-columns: 260px 1fr;
+    }
+
+    .contenido {
+        padding: 32px;
+    }
+}

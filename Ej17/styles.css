@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.layout {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "sidebar"
+        "contenido"
+        "footer";
+}
+
+/* ===== Header con la marca + menú derecha + botón hamburguesa ===== */
+.header {
+    grid-area: header;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d94190;
+    color: white;
+    padding: 16px;
+}
+
+.marca {
+    display: flex;
+    flex-direction: column;
+}
+
+.nombre-marca {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+.tipo-marca {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ===== Menú de la derecha: oculto en mobile ===== */
+.menu-derecha {
+    display: none;
+}
+
+/* ===== Checkbox oculto (el "cerebro" del menú) ===== */
+.menu-toggle {
+    display: none;
+}
+
+/* ===== Ícono hamburguesa (3 líneas) ===== */
+.menu-icono {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.menu-icono span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* ===== Sidebar: oculto por defecto en mobile ===== */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #eef3f8;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    border-top: 1px solid #dde5ee;
+}
+
+.sidebar a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #b8347a;
+}
+
+.sidebar a:hover {
+    background-color: #e0e9f2;
+}
+
+/* =====================================================
+   Selector ~ (hermano general): cuando el checkbox está
+   :checked, afecta al .sidebar que viene después en el HTML
+   ===================================================== */
+.menu-toggle:checked~.sidebar {
+    max-height: 300px;
+}
+
+/* ===== Animación del ícono: se transforma en "X" al abrir ===== */
+.menu-toggle:checked~.menu-icono span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+
+.menu-toggle:checked~.menu-icono span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked~.menu-icono span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+}
+
+.contenido {
+    grid-area: contenido;
+    padding: 24px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #2e2e2e;
+    color: white;
+    text-align: center;
+    padding: 12px;
+}
+
+/* ===== En pantallas grandes: layout de grid normal, sin hamburguesa ===== */
+@media (min-width: 768px) {
+    .layout {
+        grid-template-columns: 220px 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header header"
+            "sidebar contenido"
+            "footer footer";
+    }
+
+    .header {
+        justify-content: flex-start;
+    }
+
+    .marca {
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+    .nombre-marca {
+        font-size: 2rem;
+        margin-right: 12px;
+    }
+
+    .tipo-marca {
+        font-size: 0.9rem;
+    }
+
+    /* Mostrar el menú de la derecha, pegado al borde derecho del header */
+    .menu-derecha {
+        display: block;
+        margin-left: auto;
+    }
+
+    .menu-derecha ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu-derecha a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    .menu-derecha a:hover {
+        text-decoration: underline;
+    }
+
+    /* Ocultar el ícono hamburguesa y el sidebar-menú en desktop */
+    .menu-icono {
+        display: none;
+    }
+
+    .sidebar {
+        max-height: none;
+        overflow: visible;
+        padding: 16px;
+    }
+
+    .sidebar li {
+        border-top: none;
+    }
+
+    .sidebar a {
+        padding: 4px 0;
+    }
+}

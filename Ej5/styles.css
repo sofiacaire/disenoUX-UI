@@ -1,0 +1,21 @@
+body {
+    background-color: #f4f1ea;
+    color: #2e2e2e;
+    font-family: 'Trebuchet MS', Verdana, sans-serif;
+    max-width: 700px;
+    margin: 40px auto;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #d94190;
+    font-size: 2.2rem;
+}
+
+p {
+    font-size: 1.05rem;
+}
+
+img {
+    max-width: 100%;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 19 - Formulario multi-step con validación visual</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="form-container">
+        <h1>Crear cuenta</h1>
+
+        <!-- Indicador visual de pasos -->
+        <div class="indicador">
+            <label for="paso1" class="punto">1</label>
+            <span class="linea"></span>
+            <label for="paso2" class="punto">2</label>
+        </div>
+
+        <form class="registro-form">
+
+            <!-- Radios ocultos que controlan qué paso se muestra -->
+            <input type="radio" name="paso" id="paso1" class="paso-radio" checked>
+            <input type="radio" name="paso" id="paso2" class="paso-radio">
+
+            <!-- ===== PASO 1: Datos personales ===== -->
+            <section class="paso paso-uno">
+                <h2>Paso 1: Datos personales</h2>
+
+                <div class="form-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Escribí tu nombre">
+                    <span class="mensaje-error">Ingresá al menos 3 caracteres</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+                    <span class="mensaje-error">Ingresá un email válido</span>
+                </div>
+
+                <label for="paso2" class="btn btn-siguiente">Siguiente</label>
+            </section>
+
+            <!-- ===== PASO 2: Contraseña ===== -->
+            <section class="paso paso-dos">
+                <h2>Paso 2: Seguridad</h2>
+
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required minlength="6"
+                        placeholder="Mínimo 6 caracteres">
+                    <span class="mensaje-error">Debe tener al menos 6 caracteres</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmar">Confirmar contraseña</label>
+                    <input type="password" id="confirmar" name="confirmar" required minlength="6"
+                        placeholder="Repetí tu contraseña">
+                    <span class="mensaje-error">Debe tener al menos 6 caracteres</span>
+                </div>
+
+                <div class="botones-paso2">
+                    <label for="paso1" class="btn btn-atras">Atrás</label>
+                    <button type="submit" class="btn btn-enviar">Registrarse</button>
+                </div>
+            </section>
+
+        </form>
+    </main>
+</body>
+
+</html>

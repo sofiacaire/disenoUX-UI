@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primario: #d94190;
+    --color-primario-hover: #b8347a;
+    --color-primario-active: #9c2c68;
+    --color-secundario: #22314e;
+    --color-texto: #444;
+    --color-fondo: #eef1f5;
+    --color-fondo-tarjeta: #ffffff;
+    --color-fondo-input: #f9fafb;
+    --color-borde: #d5dae1;
+    --espaciado: 1.25rem;
+    --espaciado-grande: 2.5rem;
+    --radio-borde: 10px;
+}
+
+/* ===== Modo oscuro simple: se activa según preferencia del sistema ===== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-fondo: #1b1f27;
+        --color-fondo-tarjeta: #262b36;
+        --color-fondo-input: #1f232c;
+        --color-borde: #3a4150;
+        --color-texto: #d5dae1;
+        --color-secundario: #f1f3f6;
+    }
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--espaciado-grande) 1rem;
+    background-color: var(--color-fondo);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+h1 {
+    color: var(--color-secundario);
+    margin-bottom: 1.5rem;
+}
+
+form {
+    background-color: var(--color-fondo-tarjeta);
+    padding: var(--espaciado-grande);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 420px;
+    transition: background-color 0.3s ease;
+}
+
+/* ===== Cada div agrupa label + campo ===== */
+form div {
+    margin-bottom: var(--espaciado);
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: var(--color-texto);
+    font-size: 0.9rem;
+}
+
+/* ===== Inputs y textarea con bordes redondeados ===== */
+form input,
+form textarea {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    background-color: var(--color-fondo-input);
+    color: var(--color-texto);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* ===== Estado :focus diferenciado ===== */
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    background-color: var(--color-fondo-tarjeta);
+    box-shadow: 0 0 0 4px rgba(217, 65, 144, 0.15);
+}
+
+/* ===== Botón de envío ===== */
+form button {
+    width: 100%;
+    padding: 0.85rem;
+    border: none;
+    border-radius: var(--radio-borde);
+    background-color: var(--color-primario);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.15s ease, box-shadow 0.3s ease;
+}
+
+/* ===== Estado :hover del botón ===== */
+form button:hover {
+    background-color: var(--color-primario-hover);
+    box-shadow: 0 4px 12px rgba(217, 65, 144, 0.35);
+}
+
+/* ===== Estado :active del botón ===== */
+form button:active {
+    background-color: var(--color-primario-active);
+    transform: scale(0.97);
+}
+
+/* ===== Estado :focus del botón (accesibilidad) ===== */
+form button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(217, 65, 144, 0.3);
+}

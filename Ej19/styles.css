@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primario: #d94190;
+    --color-primario-hover: #b8347a;
+    --color-error: #e5484d;
+    --color-exito: #2fa96e;
+    --color-borde: #d5dae1;
+    --color-fondo-input: #f9fafb;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    background-color: #eef1f5;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 420px;
+}
+
+h1 {
+    text-align: center;
+    color: #22314e;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 1.25rem;
+}
+
+/* ===== Indicador visual de pasos (1 --- 2) ===== */
+.indicador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    gap: 8px;
+}
+
+.indicador .punto {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--color-borde);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicador .linea {
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-borde);
+}
+
+/* ===== Radios ocultos: el "cerebro" de la navegación entre pasos ===== */
+.paso-radio {
+    display: none;
+}
+
+/* ===== Ambos pasos ocupan el mismo lugar, se alternan con opacidad/display ===== */
+.paso {
+    display: none;
+}
+
+/* ===== Selector ~ (hermano general): muestra el paso según el radio marcado ===== */
+#paso1:checked~.paso-uno {
+    display: block;
+}
+
+#paso2:checked~.paso-dos {
+    display: block;
+}
+
+/* ===== Resaltar el punto del indicador según el paso activo ===== */
+#paso1:checked~.indicador .punto[for="paso1"],
+#paso2:checked~.indicador .punto[for="paso2"] {
+    background-color: var(--color-primario);
+}
+
+/* ===== Grupos de campos ===== */
+.form-group {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #444;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--color-borde);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: var(--color-fondo-input);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 4px rgba(217, 65, 144, 0.15);
+}
+
+/* =====================================================
+   Validación visual con :valid / :invalid
+   ===================================================== */
+
+/* Mientras el campo está vacío, no mostramos error ni éxito */
+.form-group input:placeholder-shown {
+    border-color: var(--color-borde);
+}
+
+/* Campo inválido (y ya con contenido, no vacío) -> borde rojo */
+.form-group input:not(:placeholder-shown):invalid {
+    border-color: var(--color-error);
+}
+
+/* Campo válido -> borde verde */
+.form-group input:not(:placeholder-shown):valid {
+    border-color: var(--color-exito);
+}
+
+/* Mensaje de error: oculto por defecto */
+.mensaje-error {
+    display: none;
+    color: var(--color-error);
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+/* Se muestra solo si el campo tiene contenido y es inválido */
+.form-group input:not(:placeholder-shown):invalid~.mensaje-error {
+    display: block;
+}
+
+/* ===== Botones ===== */
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.15s ease;
+}
+
+.btn-siguiente {
+    width: 100%;
+    background-color: var(--color-primario);
+    color: white;
+}
+
+.btn-siguiente:hover {
+    background-color: var(--color-primario-hover);
+}
+
+.botones-paso2 {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-atras {
+    flex: 1;
+    background-color: #eee;
+    color: #444;
+}
+
+.btn-atras:hover {
+    background-color: #ddd;
+}
+
+.btn-enviar {
+    flex: 1;
+    background-color: var(--color-primario);
+    color: white;
+}
+
+.btn-enviar:hover {
+    background-color: var(--color-primario-hover);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}

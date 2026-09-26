@@ -1,0 +1,98 @@
+/* ===== Reset básico ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+    background-color: #eef1f5;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+h1 {
+    color: #22314e;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== Contenedor del formulario ===== */
+form {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 420px;
+}
+
+/* ===== Cada div agrupa label + campo ===== */
+form div {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #444;
+    font-size: 0.9rem;
+}
+
+/* ===== Inputs y textarea con bordes redondeados ===== */
+form input,
+form textarea {
+    padding: 0.75rem 1rem;
+    border: 2px solid #d5dae1;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    background-color: #f9fafb;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* ===== Estado :focus diferenciado ===== */
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.15);
+}
+
+/* ===== Botón de envío ===== */
+form button {
+    width: 100%;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #d94190;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.15s ease, box-shadow 0.3s ease;
+}
+
+/* ===== Estado :hover del botón ===== */
+form button:hover {
+    background-color: #b8347a;
+    box-shadow: 0 4px 12px rgba(217, 65, 144, 0.35);
+}
+
+/* ===== Estado :active del botón ===== */
+form button:active {
+    background-color: #9c2c68;
+    transform: scale(0.97);
+}
+
+/* ===== Estado :focus del botón (accesibilidad) ===== */
+form button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(217, 65, 144, 0.3);
+}

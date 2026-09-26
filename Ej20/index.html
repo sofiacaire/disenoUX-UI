@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofía - Indumentaria Deportiva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&family=Cinzel&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER / NAVBAR FIJA ===== -->
+    <header class="header">
+        <div class="marca">
+            <span class="nombre-marca">Sofía</span>
+            <span class="tipo-marca">Indumentaria Deportiva</span>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icono" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </label>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Productos</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ===== HERO ===== -->
+        <section id="inicio" class="hero">
+            <div class="hero-contenido">
+                <h1>Ropa deportiva femenina</h1>
+                <p>Diseño, comodidad y calidad en cada prenda.</p>
+                <a href="#servicios" class="btn btn-primario">Ver productos</a>
+            </div>
+        </section>
+
+        <!-- ===== SERVICIOS / PRODUCTOS (Grid) ===== -->
+        <section id="servicios" class="servicios">
+            <h2>Nuestros productos</h2>
+            <div class="grid-servicios">
+                <article class="tarjeta">
+                    <h3>Remeras</h3>
+                    <p>Tela transpirable, ideal para entrenar.</p>
+                </article>
+                <article class="tarjeta">
+                    <h3>Calzas y shorts</h3>
+                    <p>Ajuste perfecto para cada movimiento.</p>
+                </article>
+                <article class="tarjeta">
+                    <h3>Camperas</h3>
+                    <p>Abrigo liviano para el día a día.</p>
+                </article>
+                <article class="tarjeta">
+                    <h3>Tops deportivos</h3>
+                    <p>Soporte y estilo en un solo producto.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== TESTIMONIOS (Carrusel con scroll-snap) ===== -->
+        <section id="testimonios" class="testimonios">
+            <h2>Lo que dicen nuestras clientas</h2>
+            <div class="carrusel">
+                <div class="testimonio">
+                    <p>"La calidad de las telas es excelente, se nota la diferencia."</p>
+                    <span>— Ana</span>
+                </div>
+                <div class="testimonio">
+                    <p>"Excelente atención y los talles quedan perfectos."</p>
+                    <span>— Julieta</span>
+                </div>
+                <div class="testimonio">
+                    <p>"Compro hace un año y siempre supera mis expectativas."</p>
+                    <span>— Micaela</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACTO ===== -->
+        <section id="contacto" class="contacto">
+            <h2>Contactanos</h2>
+            <form class="form-contacto">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required
+                        placeholder="Escribí tu consulta..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primario">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>&copy; 2026 Sofía Indumentaria Deportiva. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
