@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coffea | The richest coffee in the city</title>
+  <meta name="description"
+    content="Coffea is a coffee shop landing page: espresso, cold coffee, desserts and fresh coffee beans. Order now and join our newsletter.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Coffea | The richest coffee in the city">
+  <meta property="og:description"
+    content="Coffea is a coffee shop landing page: espresso, cold coffee, desserts and fresh coffee beans. Order now and join our newsletter.">
+  <meta property="og:image" content="assets/img/hero.jpg">
+  <link rel="icon" href="assets/icons/cat-1.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&amp;family=Playfair+Display:wght@500;600;700&amp;family=Poppins:wght@400;500;600&amp;family=Reggae+One&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header class="header">
+    <div class="header__inner container">
+      <a class="header__logo" href="/">Coffea</a>
+      <nav class="nav nav--desktop" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="/">home</a></li>
+          <li><a class="nav__link" href="#coffee-title">coffee</a></li>
+          <li><a class="nav__link" href="#dessert-title">bakery</a></li>
+          <li><a class="nav__link" href="#promo-title">shop</a></li>
+          <li><a class="nav__link" href="#testimonials-title">about</a></li>
+          <li><a class="nav__link nav__link--strong" href="#">login</a></li>
+        </ul>
+      </nav>
+      <button class="header__search" type="button" aria-label="Buscar">
+        <img src="assets/icons/search.svg" alt="" width="61" height="61">
+      </button>
+      <nav class="nav nav--mobile" aria-label="Principal">
+        <details class="nav__details">
+          <summary class="nav__toggle"><span class="visually-hidden">Menú</span></summary>
+          <ul class="nav__panel">
+            <li><a class="nav__link" href="/">home</a></li>
+            <li><a class="nav__link" href="#coffee-title">coffee</a></li>
+            <li><a class="nav__link" href="#dessert-title">bakery</a></li>
+            <li><a class="nav__link" href="#promo-title">shop</a></li>
+            <li><a class="nav__link" href="#testimonials-title">about</a></li>
+            <li><a class="nav__link nav__link--strong" href="#">login</a></li>
+          </ul>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <picture class="hero__picture">
+        <source media="(max-width: 47.99rem)" type="image/avif" srcset="assets/img/hero-sm.avif">
+        <source media="(max-width: 47.99rem)" type="image/webp" srcset="assets/img/hero-sm.webp">
+        <source type="image/avif" srcset="assets/img/hero.avif">
+        <source type="image/webp" srcset="assets/img/hero.webp">
+        <img class="hero__img" src="assets/img/hero.jpg" alt="Cup of espresso surrounded by roasted coffee beans"
+          width="1920" height="1000" fetchpriority="high" decoding="async">
+      </picture>
+      <div class="hero__content container">
+        <p class="hero__eyebrow">WELCOME</p>
+        <h1 class="hero__title" id="hero-title">We serve the richest coffee in the city!</h1>
+        <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore.</p>
+        <a class="hero__btn" href="#coffee-title">Order Now</a>
+      </div>
+    </section>
+
+    <section class="categories" aria-label="Categorías">
+      <ul class="categories__list container">
+        <li><a class="categories__item" href="#coffee-title"><span class="categories__icon categories__icon--hot"
+              aria-hidden="true"></span><span class="categories__label">Hot Coffee</span></a></li>
+        <li><a class="categories__item" href="#coffee-title"><span class="categories__icon categories__icon--cold"
+              aria-hidden="true"></span><span class="categories__label">Cold Coffee</span></a></li>
+        <li><a class="categories__item" href="#coffee-title"><span class="categories__icon categories__icon--cup"
+              aria-hidden="true"></span><span class="categories__label">Cup Coffee</span></a></li>
+        <li><a class="categories__item" href="#dessert-title"><span class="categories__icon categories__icon--dessert"
+              aria-hidden="true"></span><span class="categories__label">Dessert</span></a></li>
+      </ul>
+    </section>
+
+    <section class="products" aria-labelledby="coffee-title">
+      <h2 class="products__title" id="coffee-title">OUR SPECIAL COFFEE</h2>
+      <div class="carousel" role="group" aria-roledescription="carousel" aria-label="Our Special Coffee">
+        <a class="carousel__arrow carousel__arrow--prev" href="#coffee-1" aria-label="Anterior: Our Special Coffee"><img
+            src="assets/icons/arrow.svg" alt="" width="71" height="71"></a>
+        <ul class="carousel__track">
+          <li class="carousel__item" id="coffee-1">
+            <article class="product-card">
+              <div class="product-card__media">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/coffee-1.webp 334w, assets/img/coffee-1-2x.webp 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw">
+                  <img class="product-card__img" src="assets/img/coffee-1.jpg"
+                    srcset="assets/img/coffee-1.jpg 334w, assets/img/coffee-1-2x.jpg 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw"
+                    alt="Lungo coffee, placeholder photo" width="334" height="364" loading="lazy" decoding="async">
+                </picture>
+                <input class="product-card__fav-input" type="checkbox" id="fav-coffee-1">
+                <label class="product-card__fav" for="fav-coffee-1"><span class="visually-hidden">Marcar Lungo coffee
+                    como favorito</span></label>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">Lungo coffee</h3>
+                <p class="product-card__desc">Rich long-pull espresso with smooth crema and toasted aromatic notes.</p>
+                <div class="product-card__row">
+                  <data class="product-card__price" value="150">Rs. 150</data>
+                  <button class="product-card__btn" type="button">Order Now</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="carousel__item" id="coffee-2">
+            <article class="product-card">
+              <div class="product-card__media">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/coffee-2.webp 334w, assets/img/coffee-2-2x.webp 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw">
+                  <img class="product-card__img" src="assets/img/coffee-2.jpg"
+                    srcset="assets/img/coffee-2.jpg 334w, assets/img/coffee-2-2x.jpg 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw"
+                    alt="Espresso, placeholder photo" width="334" height="364" loading="lazy" decoding="async">
+                </picture>
+                <input class="product-card__fav-input" type="checkbox" id="fav-coffee-2">
+                <label class="product-card__fav" for="fav-coffee-2"><span class="visually-hidden">Marcar Espresso como
+                    favorito</span></label>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">Espresso</h3>
+                <p class="product-card__desc">Intense, full-bodied shot extracted from fresh dark roasted Arabica beans.
+                </p>
+                <div class="product-card__row">
+                  <data class="product-card__price" value="130">Rs. 130</data>
+                  <button class="product-card__btn" type="button">Order Now</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="carousel__item" id="coffee-3">
+            <article class="product-card">
+              <div class="product-card__media">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/coffee-3.webp 334w, assets/img/coffee-3-2x.webp 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw">
+                  <img class="product-card__img" src="assets/img/coffee-3.jpg"
+                    srcset="assets/img/coffee-3.jpg 334w, assets/img/coffee-3-2x.jpg 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw"
+                    alt="Cappuccino, placeholder photo" width="334" height="364" loading="lazy" decoding="async">
+                </picture>
+                <input class="product-card__fav-input" type="checkbox" id="fav-coffee-3">
+                <label class="product-card__fav" for="fav-coffee-3"><span class="visually-hidden">Marcar Cappuccino como
+                    favorito</span></label>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">Cappuccino</h3>
+                <p class="product-card__desc">Bold espresso topped with a velvety crown of steamed milk foam.</p>
+                <div class="product-card__row">
+                  <data class="product-card__price" value="170">Rs. 170</data>
+                  <button class="product-card__btn" type="button">Order Now</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="carousel__item" id="coffee-4">
+            <article class="product-card">
+              <div class="product-card__media">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/coffee-4.webp 334w, assets/img/coffee-4-2x.webp 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw">
+                  <img class="product-card__img" src="assets/img/coffee-4.jpg"
+                    srcset="assets/img/coffee-4.jpg 334w, assets/img/coffee-4-2x.jpg 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw"
+                    alt="Flat white, placeholder photo" width="334" height="364" loading="lazy" decoding="async">
+                </picture>
+                <input class="product-card__fav-input" type="checkbox" id="fav-coffee-4">
+                <label class="product-card__fav" for="fav-coffee-4"><span class="visually-hidden">Marcar Flat white como
+                    favorito</span></label>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">Flat white</h3>
+                <p class="product-card__desc">Double ristretto blended with glossy microfoam for a silky texture.</p>
+                <div class="product-card__row">
+                  <data class="product-card__price" value="185">Rs. 185</data>
+                  <button class="product-card__btn" type="button">Order Now</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="carousel__item" id="coffee-5">
+            <article class="product-card">
+              <div class="product-card__media">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/coffee-1.webp 334w, assets/img/coffee-1-2x.webp 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw">
+                  <img class="product-card__img" src="assets/img/coffee-1.jpg"
+                    srcset="assets/img/coffee-1.jpg 334w, assets/img/coffee-1-2x.jpg 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw"
+                    alt="Lungo coffee, placeholder photo" width="334" height="364" loading="lazy" decoding="async">
+                </picture>
+                <input class="product-card__fav-input" type="checkbox" id="fav-coffee-5">
+                <label class="product-card__fav" for="fav-coffee-5"><span class="visually-hidden">Marcar Lungo coffee
+                    como favorito</span></label>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">Lungo coffee</h3>
+                <p class="product-card__desc">Rich long-pull espresso with smooth crema and toasted aromatic notes.</p>
+                <div class="product-card__row">
+                  <data class="product-card__price" value="200">Rs. 200</data>
+                  <button class="product-card__btn" type="button">Order Now</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="carousel__item" id="coffee-6">
+            <article class="product-card">
+              <div class="product-card__media">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/coffee-2.webp 334w, assets/img/coffee-2-2x.webp 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw">
+                  <img class="product-card__img" src="assets/img/coffee-2.jpg"
+                    srcset="assets/img/coffee-2.jpg 334w, assets/img/coffee-2-2x.jpg 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw"
+                    alt="Espresso, placeholder photo" width="334" height="364" loading="lazy" decoding="async">
+                </picture>
+                <input class="product-card__fav-input" type="checkbox" id="fav-coffee-6">
+                <label class="product-card__fav" for="fav-coffee-6"><span class="visually-hidden">Marcar Espresso como
+                    favorito</span></label>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">Espresso</h3>
+                <p class="product-card__desc">Intense, full-bodied shot extracted from fresh dark roasted Arabica beans.
+                </p>
+                <div class="product-card__row">
+                  <data class="product-card__price" value="200">Rs. 200</data>
+                  <button class="product-card__btn" type="button">Order Now</button>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <a class="carousel__arrow carousel__arrow--next" href="#coffee-5"
+          aria-label="Siguiente: Our Special Coffee"><img src="assets/icons/arrow.svg" alt="" width="71"
+            height="71"></a>
+      </div>
+    </section>
+
+    <section class="products" aria-labelledby="dessert-title">
+      <h2 class="products__title" id="dessert-title">OUR SPECIAL DESSERT</h2>
+      <div class="carousel" role="group" aria-roledescription="carousel" aria-label="Our Special Dessert">
+        <a class="carousel__arrow carousel__arrow--prev" href="#dessert-1"
+          aria-label="Anterior: Our Special Dessert"><img src="assets/icons/arrow.svg" alt="" width="71"
+            height="71"></a>
+        <ul class="carousel__track">
+          <li class="carousel__item" id="dessert-1">
+            <article class="product-card">
+              <div class="product-card__media">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/dessert-1.webp 334w, assets/img/dessert-1-2x.webp 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw">
+                  <img class="product-card__img" src="assets/img/dessert-1.jpg"
+                    srcset="assets/img/dessert-1.jpg 334w, assets/img/dessert-1-2x.jpg 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw"
+                    alt="Chocolate cake, placeholder photo" width="334" height="364" loading="lazy" decoding="async">
+                </picture>
+                <input class="product-card__fav-input" type="checkbox" id="fav-dessert-1">
+                <label class="product-card__fav" for="fav-dessert-1"><span class="visually-hidden">Marcar Chocolate cake
+                    como favorito</span></label>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">Chocolate cake</h3>
+                <p class="product-card__desc">Decadent dark cocoa sponge layered with rich artisanal fudge ganache.</p>
+                <div class="product-card__row">
+                  <data class="product-card__price" value="220">Rs. 220</data>
+                  <button class="product-card__btn" type="button">Order Now</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="carousel__item" id="dessert-2">
+            <article class="product-card">
+              <div class="product-card__media">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/dessert-2.webp 334w, assets/img/dessert-2-2x.webp 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw">
+                  <img class="product-card__img" src="assets/img/dessert-2.jpg"
+                    srcset="assets/img/dessert-2.jpg 334w, assets/img/dessert-2-2x.jpg 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw"
+                    alt="Cheesecake, placeholder photo" width="334" height="364" loading="lazy" decoding="async">
+                </picture>
+                <input class="product-card__fav-input" type="checkbox" id="fav-dessert-2">
+                <label class="product-card__fav" for="fav-dessert-2"><span class="visually-hidden">Marcar Cheesecake
+                    como favorito</span></label>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">Cheesecake</h3>
+                <p class="product-card__desc">Creamy New York style cheesecake on a crunchy golden graham crust.</p>
+                <div class="product-card__row">
+                  <data class="product-card__price" value="250">Rs. 250</data>
+                  <button class="product-card__btn" type="button">Order Now</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="carousel__item" id="dessert-3">
+            <article class="product-card">
+              <div class="product-card__media">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/dessert-3.webp 334w, assets/img/dessert-3-2x.webp 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw">
+                  <img class="product-card__img" src="assets/img/dessert-3.jpg"
+                    srcset="assets/img/dessert-3.jpg 334w, assets/img/dessert-3-2x.jpg 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw"
+                    alt="Butter croissant, placeholder photo" width="334" height="364" loading="lazy" decoding="async">
+                </picture>
+                <input class="product-card__fav-input" type="checkbox" id="fav-dessert-3">
+                <label class="product-card__fav" for="fav-dessert-3"><span class="visually-hidden">Marcar Butter
+                    croissant como favorito</span></label>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">Butter croissant</h3>
+                <p class="product-card__desc">Flaky French pastry with honeycomb butter layers baked fresh daily.</p>
+                <div class="product-card__row">
+                  <data class="product-card__price" value="230">Rs. 230</data>
+                  <button class="product-card__btn" type="button">Order Now</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="carousel__item" id="dessert-4">
+            <article class="product-card">
+              <div class="product-card__media">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/dessert-4.webp 334w, assets/img/dessert-4-2x.webp 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw">
+                  <img class="product-card__img" src="assets/img/dessert-4.jpg"
+                    srcset="assets/img/dessert-4.jpg 334w, assets/img/dessert-4-2x.jpg 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw"
+                    alt="Brownie, placeholder photo" width="334" height="364" loading="lazy" decoding="async">
+                </picture>
+                <input class="product-card__fav-input" type="checkbox" id="fav-dessert-4">
+                <label class="product-card__fav" for="fav-dessert-4"><span class="visually-hidden">Marcar Brownie como
+                    favorito</span></label>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">Brownie</h3>
+                <p class="product-card__desc">Warm fudgy Belgian chocolate square with a crackly top and chewy core.</p>
+                <div class="product-card__row">
+                  <data class="product-card__price" value="265">Rs. 265</data>
+                  <button class="product-card__btn" type="button">Order Now</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="carousel__item" id="dessert-5">
+            <article class="product-card">
+              <div class="product-card__media">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/dessert-1.webp 334w, assets/img/dessert-1-2x.webp 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw">
+                  <img class="product-card__img" src="assets/img/dessert-1.jpg"
+                    srcset="assets/img/dessert-1.jpg 334w, assets/img/dessert-1-2x.jpg 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw"
+                    alt="Chocolate cake, placeholder photo" width="334" height="364" loading="lazy" decoding="async">
+                </picture>
+                <input class="product-card__fav-input" type="checkbox" id="fav-dessert-5">
+                <label class="product-card__fav" for="fav-dessert-5"><span class="visually-hidden">Marcar Chocolate cake
+                    como favorito</span></label>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">Chocolate cake</h3>
+                <p class="product-card__desc">Decadent dark cocoa sponge layered with rich artisanal fudge ganache.</p>
+                <div class="product-card__row">
+                  <data class="product-card__price" value="200">Rs. 200</data>
+                  <button class="product-card__btn" type="button">Order Now</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="carousel__item" id="dessert-6">
+            <article class="product-card">
+              <div class="product-card__media">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/dessert-2.webp 334w, assets/img/dessert-2-2x.webp 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw">
+                  <img class="product-card__img" src="assets/img/dessert-2.jpg"
+                    srcset="assets/img/dessert-2.jpg 334w, assets/img/dessert-2-2x.jpg 668w"
+                    sizes="(min-width: 90rem) 334px, (min-width: 64rem) 22vw, (min-width: 48rem) 38vw, 70vw"
+                    alt="Cheesecake, placeholder photo" width="334" height="364" loading="lazy" decoding="async">
+                </picture>
+                <input class="product-card__fav-input" type="checkbox" id="fav-dessert-6">
+                <label class="product-card__fav" for="fav-dessert-6"><span class="visually-hidden">Marcar Cheesecake
+                    como favorito</span></label>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__title">Cheesecake</h3>
+                <p class="product-card__desc">Creamy New York style cheesecake on a crunchy golden graham crust.</p>
+                <div class="product-card__row">
+                  <data class="product-card__price" value="200">Rs. 200</data>
+                  <button class="product-card__btn" type="button">Order Now</button>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <a class="carousel__arrow carousel__arrow--next" href="#dessert-5"
+          aria-label="Siguiente: Our Special Dessert"><img src="assets/icons/arrow.svg" alt="" width="71"
+            height="71"></a>
+      </div>
+    </section>
+
+    <section class="promo" aria-labelledby="promo-title">
+      <picture class="promo__picture promo__picture--left">
+        <source type="image/webp" srcset="assets/img/promo-hand.webp">
+        <img class="promo__img" src="assets/img/promo-hand.jpg" alt="" width="520" height="335" loading="lazy"
+          decoding="async">
+      </picture>
+      <div class="promo__content">
+        <h2 class="promo__title" id="promo-title">Check Out Our Best Coffee Beans</h2>
+        <a class="promo__btn" href="#">Explore Our Products <img src="assets/icons/chevron.svg" alt="" width="20"
+            height="20"></a>
+      </div>
+      <picture class="promo__picture promo__picture--right">
+        <source type="image/webp" srcset="assets/img/promo-beans.webp">
+        <img class="promo__img" src="assets/img/promo-beans.jpg" alt="" width="503" height="335" loading="lazy"
+          decoding="async">
+      </picture>
+    </section>
+
+    <section class="testimonials" aria-labelledby="testimonials-title">
+      <h2 class="testimonials__title" id="testimonials-title"><span class="testimonials__eyebrow">Come and Join</span>
+        <span class="testimonials__heading">OUR HAPPY CUSTOMERS</span>
+      </h2>
+      <div class="testimonials__viewport">
+        <ul class="testimonials__track">
+          <li class="testimonials__item" id="t-1">
+            <figure class="testimonial-card">
+              <figcaption class="testimonial-card__author">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/avatar-1.webp">
+                  <img class="testimonial-card__avatar" src="assets/img/avatar-1.jpg" alt="Portrait of Sarah Jenkins"
+                    width="56" height="56" loading="lazy" decoding="async">
+                </picture>
+                <span class="testimonial-card__who">
+                  <span class="testimonial-card__name">Sarah Jenkins</span>
+                  <span class="testimonial-card__role">Product Designer</span>
+                </span>
+                <span class="testimonial-card__rating" role="img" aria-label="5 de 5 estrellas"><img
+                    src="assets/icons/star.svg" alt="" width="24" height="24"><img src="assets/icons/star.svg" alt=""
+                    width="24" height="24"><img src="assets/icons/star.svg" alt="" width="24" height="24"><img
+                    src="assets/icons/star.svg" alt="" width="24" height="24"><img src="assets/icons/star.svg" alt=""
+                    width="24" height="24"></span>
+              </figcaption>
+              <blockquote class="testimonial-card__text">
+                <p>The Lungo coffee and fresh butter croissants here are simply unmatched. Coffea has quickly become my
+                  favorite morning stop before heading to the studio.</p>
+              </blockquote>
+            </figure>
+          </li>
+          <li class="testimonials__item" id="t-2">
+            <figure class="testimonial-card testimonial-card--featured">
+              <figcaption class="testimonial-card__author">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/avatar-2.webp">
+                  <img class="testimonial-card__avatar" src="assets/img/avatar-2.jpg" alt="Portrait of Marcus Vance"
+                    width="56" height="56" loading="lazy" decoding="async">
+                </picture>
+                <span class="testimonial-card__who">
+                  <span class="testimonial-card__name">Marcus Vance</span>
+                  <span class="testimonial-card__role">Creative Director</span>
+                </span>
+                <span class="testimonial-card__rating" role="img" aria-label="5 de 5 estrellas"><img
+                    src="assets/icons/star.svg" alt="" width="24" height="24"><img src="assets/icons/star.svg" alt=""
+                    width="24" height="24"><img src="assets/icons/star.svg" alt="" width="24" height="24"><img
+                    src="assets/icons/star.svg" alt="" width="24" height="24"><img src="assets/icons/star.svg" alt=""
+                    width="24" height="24"></span>
+              </figcaption>
+              <blockquote class="testimonial-card__text">
+                <p>Hands down the richest espresso in the city! The cozy ambiance, expertly balanced roasts, and warm
+                  staff make every visit an absolute delight.</p>
+              </blockquote>
+            </figure>
+          </li>
+          <li class="testimonials__item" id="t-3">
+            <figure class="testimonial-card">
+              <figcaption class="testimonial-card__author">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/avatar-3.webp">
+                  <img class="testimonial-card__avatar" src="assets/img/avatar-3.jpg" alt="Portrait of Elena Rostova"
+                    width="56" height="56" loading="lazy" decoding="async">
+                </picture>
+                <span class="testimonial-card__who">
+                  <span class="testimonial-card__name">Elena Rostova</span>
+                  <span class="testimonial-card__role">Food &amp; Lifestyle Writer</span>
+                </span>
+                <span class="testimonial-card__rating" role="img" aria-label="5 de 5 estrellas"><img
+                    src="assets/icons/star.svg" alt="" width="24" height="24"><img src="assets/icons/star.svg" alt=""
+                    width="24" height="24"><img src="assets/icons/star.svg" alt="" width="24" height="24"><img
+                    src="assets/icons/star.svg" alt="" width="24" height="24"><img src="assets/icons/star.svg" alt=""
+                    width="24" height="24"></span>
+              </figcaption>
+              <blockquote class="testimonial-card__text">
+                <p>Their specialty pour-overs and chocolate cake are out of this world. Every single detail, from the
+                  rich aroma to the presentation, is top notch.</p>
+              </blockquote>
+            </figure>
+          </li>
+        </ul>
+      </div>
+      <nav class="testimonials__pager" aria-label="Testimonios">
+        <a class="testimonials__dot" href="#t-1" aria-label="Testimonio 1"></a>
+        <a class="testimonials__dot" href="#t-2" aria-label="Testimonio 2"></a>
+        <a class="testimonials__dot" href="#t-3" aria-label="Testimonio 3"></a>
+      </nav>
+    </section>
+
+    <section class="newsletter" aria-labelledby="newsletter-title">
+      <picture class="newsletter__picture newsletter__picture--left">
+        <source type="image/webp" srcset="assets/img/newsletter-beans.webp">
+        <img class="newsletter__img" src="assets/img/newsletter-beans.jpg" alt="" width="482" height="321"
+          loading="lazy" decoding="async">
+      </picture>
+      <div class="newsletter__content">
+        <h2 class="newsletter__title" id="newsletter-title">Join in and get 15% off!</h2>
+        <p class="newsletter__subtitle">Subscribe to our newsletter and get a discount on your first order.</p>
+        <form class="newsletter__form" action="#" method="get">
+          <label class="visually-hidden" for="newsletter-email">Email address</label>
+          <div class="newsletter__field">
+            <img class="newsletter__icon" src="assets/icons/mail.svg" alt="" width="24" height="24">
+            <input class="newsletter__input" id="newsletter-email" name="email" type="email" required
+              autocomplete="email" placeholder="Your email address">
+          </div>
+          <button class="newsletter__btn" type="submit">Subscribe</button>
+        </form>
+      </div>
+      <picture class="newsletter__picture newsletter__picture--right">
+        <source type="image/webp" srcset="assets/img/newsletter-beans.webp">
+        <img class="newsletter__img" src="assets/img/newsletter-beans.jpg" alt="" width="482" height="321"
+          loading="lazy" decoding="async">
+      </picture>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner container">
+      <a class="footer__logo" href="/">Coffea</a>
+      <nav class="footer__col" aria-label="Privacy">
+        <h3 class="footer__title">PRIVACY</h3>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="#">Privacy policy</a></li>
+          <li><a class="footer__link" href="#">Terms of use</a></li>
+          <li><a class="footer__link" href="#">Cookies</a></li>
+        </ul>
+      </nav>
+      <nav class="footer__col" aria-label="Services">
+        <h3 class="footer__title">SERVICES</h3>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="#">Explore Our Products</a></li>
+          <li><a class="footer__link" href="#">Plans &amp; pricing</a></li>
+          <li><a class="footer__link" href="#">Sell your products</a></li>
+        </ul>
+      </nav>
+      <nav class="footer__col" aria-label="About Us">
+        <h3 class="footer__title">ABOUT US</h3>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="#">Our story</a></li>
+          <li><a class="footer__link" href="#">Our team</a></li>
+          <li><a class="footer__link" href="#">Careers</a></li>
+        </ul>
+      </nav>
+      <nav class="footer__col" aria-label="Information">
+        <h3 class="footer__title">INFORMATION</h3>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="#">Contact</a></li>
+          <li><a class="footer__link" href="#">FAQ</a></li>
+          <li><a class="footer__link" href="#">Shipping</a></li>
+        </ul>
+      </nav>
+      <div class="footer__col">
+        <h3 class="footer__title">SOCIAL MEDIA</h3>
+        <ul class="footer__social-list">
+          <li><a class="footer__social" href="#" aria-label="X (Twitter)"><img src="assets/icons/social-x.svg" alt=""
+                width="24" height="24"></a></li>
+          <li><a class="footer__social" href="#" aria-label="Instagram"><img src="assets/icons/social-instagram.svg"
+                alt="" width="24" height="24"></a></li>
+          <li><a class="footer__social" href="#" aria-label="Facebook"><img src="assets/icons/social-facebook.svg"
+                alt="" width="24" height="24"></a></li>
+          <li><a class="footer__social" href="#" aria-label="LinkedIn"><img src="assets/icons/social-linkedin.svg"
+                alt="" width="24" height="24"></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

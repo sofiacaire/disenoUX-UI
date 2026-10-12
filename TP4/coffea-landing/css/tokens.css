@@ -1,0 +1,95 @@
+/* Design tokens extraídos del Figma (ver PRD sección 4) */
+:root {
+  /* Colores */
+  --color-espresso: #30261c;
+  --color-maroon: #2a0000;
+  --color-sand: #e2d9c8;
+  --color-sand-20: rgba(226, 217, 200, 0.2);
+  --color-sand-40: rgba(226, 217, 200, 0.4);
+  --color-bg: #f1f0ee;
+  --color-muted: #544a3e;
+  --color-border-soft: rgba(48, 38, 28, 0.1);
+  --color-text-soft: rgba(48, 38, 28, 0.7);
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-star: #ffb921; /* Extraído del SVG de estrellas de Figma (0:200) */
+  --color-overlay: rgba(48, 38, 28, 0.55); /* overlay del hero para contraste AA */
+  --color-error: #b3261e; /* borde de error del newsletter (:user-invalid) */
+  --shadow-card: 0 0.5rem 1.5rem rgba(48, 38, 28, 0.12);
+
+  /* Tipografía */
+  --font-display: "Playfair Display", serif;
+  --font-body: "Outfit", sans-serif;
+  --font-ui: "Poppins", sans-serif;
+  --font-accent: "Reggae One", cursive;
+
+  /* Escala tipográfica (mobile-first; se ajusta en xl) */
+  --fs-hero: clamp(2.5rem, 1.5rem + 3.5vw, 4.5rem);
+  --lh-hero: 1.14;
+  --fs-h2: 1.5rem;
+  --ls-h2: 0.08em;
+  --fs-cta: clamp(1.75rem, 1.25rem + 2vw, 2.5rem);
+  --lh-cta: 1.25;
+  --fs-card-title: 1.5rem;
+  --fs-logo: 1.75rem;
+  --fs-footer-h: 1.25rem;
+  --fs-lg: 1.25rem;
+  --ls-lg: 0.2em;
+  --fs-md: 1.125rem;
+  --fs-base: 1rem;
+  --fs-sm: 0.875rem;
+  --fs-xs: 0.75rem;
+  --lh-xs: 1.667;
+
+  /* Forma y espacio */
+  --radius-pill: 100px;
+  --radius-card: 18px;
+  --radius-img: 12px;
+  --radius-btn: 8px;
+  --border-card: 1.5px;
+  --border-testimonial: 2px;
+  --container-max: 1444px;
+  --gutter: 1rem;
+  --space-1: 0.25rem; /* 4 */
+  --space-2: 0.5rem; /* 8 */
+  --space-3: 0.75rem; /* 12 */
+  --space-4: 1rem; /* 16 */
+  --space-5: 1.5rem; /* 24 */
+  --space-6: 1.75rem; /* 28 */
+  --space-7: 2.5rem; /* 40 */
+  --space-8: 3.5rem; /* 56 */
+  --space-9: 4rem; /* 64 */
+  --space-10: 5rem; /* 80 */
+
+  /* Medidas de componentes */
+  --size-touch: 2.75rem; /* 44 */
+  --size-search: 2.75rem;
+  --size-arrow: 4.4375rem; /* 71 */
+  --size-category-icon: 5.125rem; /* 82 */
+  --transition: 200ms ease;
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --gutter: 2rem;
+    --fs-h2: 1.75rem;
+    --fs-card-title: 1.75rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  :root {
+    --gutter: 3rem;
+    --fs-h2: 2rem;
+    --ls-h2: 0.04em;
+    --size-search: 3.8125rem; /* 61 */
+  }
+}
+
+@media (min-width: 90rem) {
+  :root {
+    --fs-logo: 2rem;
+    --fs-footer-h: 1.5rem;
+    --fs-card-title: 2.375rem;
+  }
+}

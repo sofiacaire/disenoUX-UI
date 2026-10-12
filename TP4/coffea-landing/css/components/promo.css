@@ -1,0 +1,88 @@
+/* CTA granos de café: 335 px, imágenes laterales decorativas */
+.promo {
+  min-height: 20.9375rem; /* 335 */
+  padding: var(--space-8) var(--gutter);
+}
+
+.promo__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  text-align: center;
+}
+
+.promo__title {
+  max-width: 23.25rem; /* 372 */
+  color: var(--color-black);
+  font-family: var(--font-display);
+  font-size: var(--fs-cta);
+  font-weight: 600;
+  line-height: var(--lh-cta);
+}
+
+.promo__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-width: 16.125rem; /* 258 */
+  min-height: 3.1875rem; /* 51 */
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-espresso);
+  color: var(--color-bg);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: 500;
+  transition:
+    background-color var(--transition),
+    transform var(--transition);
+}
+
+.promo__btn:hover {
+  background-color: var(--color-maroon);
+  transform: translateY(-2px);
+}
+
+/* Imágenes decorativas: ocultas en mobile */
+.promo__picture {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: none;
+}
+
+.promo__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.promo__picture--left {
+  left: 0;
+  width: 14rem;
+}
+
+.promo__picture--right {
+  right: 0;
+  width: min(503px, 26.2vw);
+}
+
+@media (min-width: 48rem) {
+  .promo__picture--left {
+    display: block;
+  }
+}
+
+@media (min-width: 64rem) {
+  .promo__picture--left {
+    width: min(520px, 27.09vw);
+  }
+
+  .promo__picture--right {
+    display: block;
+  }
+}

@@ -1,0 +1,72 @@
+/* Franja de categorías: 2×2 en mobile, 4 en fila desde md */
+.categories {
+  display: flex;
+  align-items: center;
+  min-height: 13.75rem; /* 220 */
+  padding-block: var(--space-5);
+  background-color: var(--color-sand);
+}
+
+.categories__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5) var(--space-4);
+  max-width: 52.8125rem; /* 845 */
+}
+
+.categories__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--size-touch);
+  color: var(--color-muted);
+  font-family: var(--font-ui);
+  font-size: var(--fs-md);
+  font-weight: 500;
+  text-align: center;
+  transition: color var(--transition);
+}
+
+.categories__item:hover {
+  color: var(--color-espresso);
+}
+
+/* Íconos SVG como máscara para heredar el color del texto (incluye hover) */
+.categories__icon {
+  display: inline-block;
+  width: var(--size-category-icon);
+  height: var(--size-category-icon);
+  background-color: currentcolor;
+  -webkit-mask-image: var(--icon);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-image: var(--icon);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
+.categories__icon--hot {
+  --icon: url("../../assets/icons/cat-hot.svg");
+}
+
+.categories__icon--cold {
+  --icon: url("../../assets/icons/cat-cold.svg");
+}
+
+.categories__icon--cup {
+  --icon: url("../../assets/icons/cat-cup.svg");
+}
+
+.categories__icon--dessert {
+  --icon: url("../../assets/icons/cat-dessert.svg");
+}
+
+@media (min-width: 48rem) {
+  .categories__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
